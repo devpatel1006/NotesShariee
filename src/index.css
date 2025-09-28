@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Theme Styles */
+.dark-theme {
+  /* Background colors */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-card: #1e293b;
+  --bg-hover: #334155;
+  
+  /* Text colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  
+  /* Border colors */
+  --border-primary: #334155;
+  --border-secondary: #475569;
+  
+  /* Brand colors remain the same but with adjusted opacity */
+  --violet-50: rgba(124, 58, 237, 0.1);
+  --violet-100: rgba(124, 58, 237, 0.2);
+  --violet-600: #7c3aed;
+  --violet-700: #6d28d9;
+  
+  --emerald-50: rgba(16, 185, 129, 0.1);
+  --emerald-100: rgba(16, 185, 129, 0.2);
+  --emerald-600: #10b981;
+  --emerald-700: #059669;
+  
+  --amber-50: rgba(245, 158, 11, 0.1);
+  --amber-100: rgba(245, 158, 11, 0.2);
+  --amber-600: #f59e0b;
+  --amber-700: #d97706;
+}
+
+/* Apply dark theme styles */
+.dark-theme {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.dark-theme .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.dark-theme .bg-gray-50 {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-theme .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+.dark-theme .text-gray-800 {
+  color: var(--text-primary) !important;
+}
+
+.dark-theme .text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.dark-theme .text-gray-500 {
+  color: var(--text-muted) !important;
+}
+
+.dark-theme .border-gray-200 {
+  border-color: var(--border-primary) !important;
+}
+
+.dark-theme .border-gray-300 {
+  border-color: var(--border-secondary) !important;
+}
+
+.dark-theme .hover\:bg-gray-50:hover {
+  background-color: var(--bg-hover) !important;
+}
+
+.dark-theme .hover\:bg-gray-100:hover {
+  background-color: var(--bg-hover) !important;
+}
+
+.dark-theme .hover\:bg-gray-200:hover {
+  background-color: var(--bg-hover) !important;
+}
+
+/* Card hover effects in dark mode */
+.dark-theme .hover\:shadow-md:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark-theme .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark-theme .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark-theme .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Input fields in dark mode */
+.dark-theme input[type="text"],
+.dark-theme input[type="email"],
+.dark-theme input[type="password"],
+.dark-theme select,
+.dark-theme textarea {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--border-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme input[type="text"]:focus,
+.dark-theme input[type="email"]:focus,
+.dark-theme input[type="password"]:focus,
+.dark-theme select:focus,
+.dark-theme textarea:focus {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark-theme input::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Rich text editor in dark mode */
+.dark-theme [contenteditable] {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark-theme [contenteditable]:empty::before {
+  color: var(--text-muted) !important;
+}
+
+/* Scrollbar styling for dark mode */
+.dark-theme ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: var(--border-secondary);
+}
+
+/* Glassmorphism effects in dark mode */
+.dark-theme .backdrop-blur-sm {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+/* Brand color adjustments for dark mode */
+.dark-theme .bg-violet-50 {
+  background-color: var(--violet-50) !important;
+}
+
+.dark-theme .bg-violet-100 {
+  background-color: var(--violet-100) !important;
+}
+
+.dark-theme .bg-emerald-50 {
+  background-color: var(--emerald-50) !important;
+}
+
+.dark-theme .bg-emerald-100 {
+  background-color: var(--emerald-100) !important;
+}
+
+.dark-theme .bg-amber-50 {
+  background-color: var(--amber-50) !important;
+}
+
+.dark-theme .bg-amber-100 {
+  background-color: var(--amber-100) !important;
+}
+
+/* Login form gradient background in dark mode */
+.dark-theme .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary)) !important;
+}
