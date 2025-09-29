@@ -31,9 +31,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const updateThemeClass = (dark: boolean) => {
     if (dark) {
-      document.body.classList.add('dark-theme');
+      document.documentElement.classList.add('dark');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.remove('dark');
     }
   };
 
